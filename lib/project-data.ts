@@ -1,25 +1,25 @@
 export const PROJECTS = [
   {
     id: "baseline",
-    title: "Baseline",
-    year: "2025",
-    services: ["Branding", "Web Design"],
-    linkText: "Visit Site",
-    linkUrl: "#",
+    title: "一面：把经历讲散了",
+    year: "2026",
+    services: ["项目经验", "逻辑表达"],
+    linkText: "去新建复盘",
+    linkUrl: "/new-review",
     overview: {
-      title: "Overview",
+      title: "这场面试",
       content:
-        "Baseline is a modern tennis brand concept built around balance, discipline, and quiet confidence. The project explores how performance-led sports branding can feel premium and lifestyle-focused without leaning on aggressive visuals.",
+        "面试官连续追问一个项目的取舍。回答里堆了背景，没有先说结论，也没有讲清为什么当时那样选。",
     },
     direction: {
-      title: "Direction",
+      title: "哪里不稳",
       content:
-        "Neutral tones establish a calm, understated foundation, while natural light adds warmth and authenticity to the scene. An editorial approach to composition introduces structure and flow, guiding the eye with intention and creating a sense of visual clarity and rhythm throughout.",
+        "项目经历停在过程描述，缺少指标和取舍。被追问时容易把时间线再讲一遍，而不是补上判断。",
     },
     outcome: {
-      title: "Outcome",
+      title: "下次准备",
       content:
-        "A refined brand foundation built for longevity and flexibility, crafted to translate seamlessly across digital platforms and physical touchpoints while maintaining consistency, clarity, and recognition as the brand grows.",
+        "每个项目先用一句话给出结果，再补一个关键数字和一次放弃的方案。终稿里把这三句单独留下。",
     },
     heroImage: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&h=900&fit=crop",
     galleryImages: [
@@ -31,25 +31,25 @@ export const PROJECTS = [
   },
   {
     id: "elan",
-    title: "Élan No. 7",
-    year: "2024",
-    services: ["Visual Design", "Web Design"],
-    linkText: "Visit Site",
-    linkUrl: "#",
+    title: "二面：业务问题答虚了",
+    year: "2026",
+    services: ["业务理解", "岗位匹配"],
+    linkText: "去新建复盘",
+    linkUrl: "/new-review",
     overview: {
-      title: "Overview",
+      title: "这场面试",
       content:
-        "Élan No. 7 is a luxury fragrance brand identity designed to evoke elegance and sophistication. The project balances minimalist aesthetics with rich, sensory-driven storytelling.",
+        "二面开始问为什么做这个功能、用户是谁、不做会怎样。回答停在功能清单，没有落到一个具体用户和一次真实取舍。",
     },
     direction: {
-      title: "Direction",
+      title: "哪里不稳",
       content:
-        "Soft gradients and muted tones create an atmosphere of understated luxury. Typography choices emphasize refinement while maintaining readability across all touchpoints.",
+        "业务理解被讲成产品说明书。面试官要的是判断，回答给的是模块介绍。",
     },
     outcome: {
-      title: "Outcome",
+      title: "下次准备",
       content:
-        "A cohesive brand system that translates beautifully from digital experiences to physical packaging, establishing a memorable presence in the competitive luxury market.",
+        "挑一个功能，写清用户、当时的约束，以及没做的那个方案。复盘时把这道题收进关键问题。",
     },
     heroImage: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=1200&h=900&fit=crop",
     galleryImages: [
@@ -61,25 +61,25 @@ export const PROJECTS = [
   },
   {
     id: "nexus",
-    title: "Nexus",
-    year: "2024",
-    services: ["Framer Dev", "Web Design"],
-    linkText: "Visit Site",
-    linkUrl: "#",
+    title: "数据题：数字没有口径",
+    year: "2025",
+    services: ["数据分析", "逻辑表达"],
+    linkText: "去新建复盘",
+    linkUrl: "/new-review",
     overview: {
-      title: "Overview",
+      title: "这场面试",
       content:
-        "Nexus is a SaaS platform interface designed for modern teams. The focus was on creating an intuitive, powerful dashboard that feels approachable yet professional.",
+        "问到转化率时给了一个百分比，但没说分子分母，也没说这个数是哪一段时间的。追问之后开始改口。",
     },
     direction: {
-      title: "Direction",
+      title: "哪里不稳",
       content:
-        "Clean lines and purposeful whitespace guide users through complex workflows. The color system supports hierarchy while maintaining visual harmony across all states.",
+        "数字是记得的，口径是临时补的。面试官听得出结论和数据对不上。",
     },
     outcome: {
-      title: "Outcome",
+      title: "下次准备",
       content:
-        "A scalable design system that improved user engagement by 40% and reduced onboarding time significantly through intuitive navigation patterns.",
+        "每个关键数字写成「谁、在哪段时间、分子分母是什么」。复盘评分里单独看数据分析这一项。",
     },
     heroImage: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&h=900&fit=crop",
     galleryImages: [
@@ -91,25 +91,25 @@ export const PROJECTS = [
   },
   {
     id: "aurora",
-    title: "Aurora",
-    year: "2024",
-    services: ["Branding", "Visual Design"],
-    linkText: "Visit Site",
-    linkUrl: "#",
+    title: "HR 面：动机说得太满",
+    year: "2025",
+    services: ["沟通表达", "岗位匹配"],
+    linkText: "去新建复盘",
+    linkUrl: "/new-review",
     overview: {
-      title: "Overview",
+      title: "这场面试",
       content:
-        "Aurora is a wellness and meditation app brand that brings calm and clarity to daily life. The design language reflects tranquility while remaining engaging and modern.",
+        "问为什么看这个岗位时，回答覆盖了行业、公司和title，没有一件和自己已经做过的事对上。",
     },
     direction: {
-      title: "Direction",
+      title: "哪里不稳",
       content:
-        "Soft, organic shapes combined with a serene color palette create an immersive experience. Every interaction was designed to feel gentle and intentional.",
+        "动机听起来像岗位说明书的复述。没有一个例子说明自己为什么接得住这份工作。",
     },
     outcome: {
-      title: "Outcome",
+      title: "下次准备",
       content:
-        "A brand identity that resonates deeply with users seeking mindfulness, resulting in strong community growth and positive user sentiment.",
+        "用一段自己的项目说明和这个岗位的交集，控制在四句话里。终稿里把这段单独存下来。",
     },
     heroImage: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=1200&h=900&fit=crop",
     galleryImages: [
@@ -121,25 +121,25 @@ export const PROJECTS = [
   },
   {
     id: "forge",
-    title: "Forge",
-    year: "2023",
-    services: ["Web Design", "Framer Dev"],
-    linkText: "Visit Site",
-    linkUrl: "#",
+    title: "终面：取舍没有收住",
+    year: "2025",
+    services: ["产品思维", "业务理解"],
+    linkText: "去新建复盘",
+    linkUrl: "/new-review",
     overview: {
-      title: "Overview",
+      title: "这场面试",
       content:
-        "Forge is a creative agency portfolio that showcases bold work through an equally bold digital presence. The site itself became a statement of capability.",
+        "终面给了一个资源不够的题。方案列了三条，没有说先做哪条，也没有说剩下两条为什么先不做。",
     },
     direction: {
-      title: "Direction",
+      title: "哪里不稳",
       content:
-        "High contrast and dynamic layouts create energy and movement. Micro-interactions reward exploration while maintaining focus on the work itself.",
+        "产品思维停在罗列。面试官要的是顺序和代价，回答给的是可能性。",
     },
     outcome: {
-      title: "Outcome",
+      title: "下次准备",
       content:
-        "A portfolio that doubled client inquiries and established Forge as a leader in innovative digital experiences within their market.",
+        "练习时每道题只留一个先做的方案，并写下一句不做其他方案的原因。复盘时放进下一次准备。",
     },
     heroImage: "https://images.unsplash.com/photo-1565372195458-9de0b320ef04?w=1200&h=900&fit=crop",
     galleryImages: [
@@ -151,8 +151,8 @@ export const PROJECTS = [
   },
 ]
 
-export const SERVICES_OPTIONS = ["Web Design", "Framer Dev", "Visual Design", "Branding", "Other"]
-export const BUDGET_OPTIONS = ["$1-$5k", "$5-$10k", "$10-$20k", "$20-$50k", "$50k+"]
+export const SERVICES_OPTIONS = ["项目经验", "业务理解", "数据分析", "沟通表达", "其他"]
+export const BUDGET_OPTIONS = ["一面", "二面", "三面", "HR面", "终面"]
 
 export function getProjectById(id: string) {
   return PROJECTS.find((p) => p.id === id)

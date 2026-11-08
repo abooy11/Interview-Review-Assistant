@@ -19,19 +19,15 @@ export const AboutModal = () => {
 
       {/* Headline */}
       <h2 className="text-[28px] md:text-[32px] leading-[36px] md:leading-[40px] font-medium text-[#0f0f12] tracking-[-0.02em] text-balance">
-        Bold web & product design for the builders of tomorrow.
+        一场面试，留下三层记录。
       </h2>
 
-      {/* Body Paragraphs */}
       <div className="flex flex-col gap-4 text-[16px] leading-[24px] text-[#0f0f12] tracking-[-0.01em]">
         <p>
-          面试复盘助手 began with a simple idea: design should help ambitious builders move forward with clarity and
-          confidence. Today, we partner with founders, teams, and creators to craft sharper products, smarter sites, and
-          digital experiences built to lead.
+          先填公司、轮次和岗位，再上传或粘贴面试记录。原始记录单独保存，生成复盘时不会被改写。
         </p>
         <p>
-          Through thoughtful web and product design, we simplify complexity, elevate ideas, and support long-term
-          growth.
+          AI 初稿可以重新生成。你改过并保存的那一份是终稿，之后再生成也不会覆盖它。
         </p>
       </div>
     </div>
@@ -47,7 +43,7 @@ export const AboutModal = () => {
             borderRadius: "42px",
           }}
         >
-          <span className="text-lg tracking-[-0.6px] font-medium font-display">复盘总结</span>
+          <span className="text-lg tracking-[-0.6px] font-medium font-display">怎么用</span>
         </button>
 
         <Dialog open={open} onOpenChange={setOpen}>
@@ -68,7 +64,7 @@ export const AboutModal = () => {
           borderRadius: "42px",
         }}
       >
-        <span className="text-lg tracking-[-0.6px] font-medium font-display">复盘总结</span>
+        <span className="text-lg tracking-[-0.6px] font-medium font-display">怎么用</span>
       </button>
 
       <Drawer open={open} onOpenChange={setOpen}>

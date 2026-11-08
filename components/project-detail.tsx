@@ -5,7 +5,6 @@ import { ArrowRight, Home } from "lucide-react"
 import Link from "next/link"
 import { getNextProject } from "@/lib/project-data"
 import { publicPath } from "@/lib/public-path"
-import { ContactForm } from "./contact-form"
 
 interface ProjectData {
   id: string
@@ -40,14 +39,14 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
           className="inline-flex items-center gap-2 mb-8 text-sm text-[#595959] hover:text-black transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to home
+          返回首页
         </Link>
 
         {/* Back Link */}
         <Link
           href="/"
           className="fixed bottom-6 right-6 z-50 w-12 h-12 bg-[#0f0f12] text-white rounded-full flex items-center justify-center shadow-lg hover:bg-[#1a1a21] transition-colors"
-          aria-label="Back to home"
+          aria-label="返回首页"
         >
           <Home className="w-5 h-5" />
         </Link>
@@ -58,12 +57,12 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
 
           <div className="flex flex-wrap gap-x-12 gap-y-4 text-sm">
             <div>
-              <span className="text-[#999999] block mb-1">Year</span>
+              <span className="text-[#999999] block mb-1">时间</span>
               <span className="text-black">{project.year}</span>
             </div>
 
             <div>
-              <span className="text-[#999999] block mb-1">Services</span>
+              <span className="text-[#999999] block mb-1">关注</span>
               <div className="flex gap-2">
                 {project.services.map((service) => (
                   <span key={service} className="text-black">
@@ -74,10 +73,10 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
             </div>
 
             <div className="ml-auto">
-              <span className="text-[#999999] block mb-1">Link</span>
-              <a href={project.linkUrl} className="text-black hover:underline">
-                {project.linkText}
-              </a>
+              <span className="text-[#999999] block mb-1">下一步</span>
+              <Link href="/new-review" className="text-black hover:underline">
+                去新建复盘
+              </Link>
             </div>
           </div>
         </motion.header>
@@ -86,7 +85,7 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
         <motion.div className="mb-12 rounded-2xl overflow-hidden" {...fadeInUp}>
           <img
             src={publicPath(project.heroImage || "/placeholder.svg")}
-            alt={`${project.title} hero`}
+            alt={`${project.title} 封面`}
             className="w-full aspect-[4/3] object-cover"
           />
         </motion.div>
@@ -103,7 +102,7 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
             <motion.div key={index} className="rounded-2xl overflow-hidden" {...fadeInUp}>
               <img
                 src={publicPath(src || "/placeholder.svg")}
-                alt={`${project.title} gallery ${index + 1}`}
+                alt={`${project.title} 配图 ${index + 1}`}
                 className="w-full aspect-[4/3] object-cover"
               />
             </motion.div>
@@ -133,8 +132,17 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
           </Link>
         </motion.div>
 
-        {/* Contact Section */}
-        <ContactForm />
+        <motion.section className="border-t border-gray-100 pt-16" {...fadeInUp}>
+          <h2 className="text-2xl font-semibold text-black mb-2">开始自己的复盘</h2>
+          <p className="text-sm text-[#595959] mb-6">填公司、轮次和岗位，贴上面试记录。原始记录会单独留下。</p>
+          <Link
+            href="/new-review"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#0a0a20] text-white rounded-full text-sm font-medium hover:bg-[#1a1a30] transition-colors"
+          >
+            新建面试复盘
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </motion.section>
 
         {/* Footer Logo Section */}
         <motion.div

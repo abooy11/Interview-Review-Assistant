@@ -25,23 +25,23 @@ export function ContactForm() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log("Form submitted:", formData)
-    alert("Thank you for your message! This is a demo form.")
+    alert("这是示例，内容不会发送。要记一场面试，请去新建复盘。")
   }
 
   return (
     <motion.div className="border-t border-gray-100 pt-16" {...fadeInUp}>
       <div className="mb-8">
-        <h2 className="text-2xl font-semibold text-black mb-2">Contact Form</h2>
-        <p className="text-sm text-[#595959]">Let us build your next showstopping project.</p>
+        <h2 className="text-2xl font-semibold text-black mb-2">记下这一场</h2>
+        <p className="text-sm text-[#595959]">示例表单不会发出去。真正的复盘从「新建面试复盘」开始。</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div className="flex flex-col gap-2">
-            <label className="text-[13px] font-normal text-black">Name</label>
+            <label className="text-[13px] font-normal text-black">公司</label>
             <input
               type="text"
-              placeholder="Jane Smith"
+              placeholder="例如：字节跳动"
               className="w-full h-10 px-4 bg-[#bbbbbb26] rounded-full border-none text-sm focus:outline-none focus:ring-1 focus:ring-black/10 transition-shadow"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -50,10 +50,10 @@ export function ContactForm() {
           </div>
 
           <div className="flex flex-col gap-2">
-            <label className="text-[13px] font-normal text-black">Email</label>
+            <label className="text-[13px] font-normal text-black">岗位</label>
             <input
-              type="email"
-              placeholder="jane@company.com"
+              type="text"
+              placeholder="例如：产品经理"
               className="w-full h-10 px-4 bg-[#bbbbbb26] rounded-full border-none text-sm focus:outline-none focus:ring-1 focus:ring-black/10 transition-shadow"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -63,7 +63,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-[13px] font-normal text-black">Service</label>
+          <label className="text-[13px] font-normal text-black">关注点</label>
           <div className="relative">
             <select
               className="w-full h-10 px-4 pr-10 bg-[#bbbbbb26] rounded-full border-none text-sm appearance-none focus:outline-none text-[#999999]"
@@ -72,7 +72,7 @@ export function ContactForm() {
               required
             >
               <option value="" disabled>
-                Select...
+                请选择
               </option>
               {SERVICES_OPTIONS.map((opt) => (
                 <option key={opt} value={opt} className="text-black">
@@ -98,9 +98,9 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-[13px] font-normal text-black">What help do you need?</label>
+          <label className="text-[13px] font-normal text-black">这场哪里不稳</label>
           <textarea
-            placeholder="Describe your project..."
+            placeholder="写下一句下次要补的内容"
             className="w-full h-24 px-4 py-3 bg-[#bbbbbb26] rounded-2xl border-none text-sm resize-none focus:outline-none focus:ring-1 focus:ring-black/10 transition-shadow"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -109,7 +109,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="text-[13px] font-normal text-black">What is your budget?</label>
+          <label className="text-[13px] font-normal text-black">轮次</label>
           <div className="relative">
             <select
               className="w-full h-10 px-4 pr-10 bg-[#bbbbbb26] rounded-full border-none text-sm appearance-none focus:outline-none text-[#999999]"
@@ -118,7 +118,7 @@ export function ContactForm() {
               required
             >
               <option value="" disabled>
-                Select...
+                请选择
               </option>
               {BUDGET_OPTIONS.map((opt) => (
                 <option key={opt} value={opt} className="text-black">
@@ -146,13 +146,13 @@ export function ContactForm() {
         <div className="flex flex-wrap items-center justify-between gap-5 mt-8">
           <div className="flex items-center gap-2.5">
             <Clock className="w-5 h-5 text-[#595959]" />
-            <span className="text-sm text-[#595959]">12 hours typical response</span>
+            <span className="text-sm text-[#595959]">示例页，不会发出去</span>
           </div>
           <button
             type="submit"
             className="w-full md:w-[240px] h-10 bg-[#0f0f12] text-white rounded-full font-semibold text-sm hover:bg-[#1a1a21] transition-colors cursor-pointer"
           >
-            Submit
+            知道了
           </button>
         </div>
       </form>

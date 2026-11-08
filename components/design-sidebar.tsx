@@ -8,39 +8,35 @@ import Image from "next/image"
 import Link from "next/link"
 import { publicPath } from "@/lib/public-path"
 
-// Constants for company logos
-const TRUSTED_COMPANIES = [
-  { name: "Euphoria", icon: "EUPH" },
-  { name: "Focal Point", icon: "FOCAL" },
-  { name: "45 Degrees", icon: "45°" },
-  { name: "CoreOS", icon: "CORE" },
-  { name: "EasyTax", icon: "TAX" },
-  { name: "Epicurious", icon: "EPIC" },
+const REVIEW_MARKS = [
+  { name: "原始记录", icon: "01" },
+  { name: "AI 初稿", icon: "02" },
+  { name: "最终复盘", icon: "03" },
+  { name: "关键问题", icon: "04" },
+  { name: "面试评分", icon: "05" },
+  { name: "下次准备", icon: "06" },
 ]
 
-const TESTIMONIALS = [
+const NOTES = [
   {
-    quote:
-      "From early concepts to final delivery, 面试复盘助手 delivered thoughtful design with real impact. The result feels modern, confident, and built to scale.",
-    author: "Sarah L",
-    role: "Co-Founder",
+    quote: "原始记录单独保存。重新生成只换初稿，不会改掉已经存好的终稿。",
+    author: "原始记录",
+    role: "不会被覆盖",
   },
   {
-    quote:
-      "Working with 面试复盘助手 was a breeze. They took our scattered ideas and turned them into a beautiful, modern website. Couldn't be happier with the result.",
-    author: "Diego A",
-    role: "Founder & CEO",
+    quote: "同一家公司的多轮面试归在一起，首页按行业看投递和结果。",
+    author: "求职总览",
+    role: "按公司去重",
   },
   {
-    quote:
-      "面试复盘助手 made the entire process feel effortless. They brought clarity, structure, and a strong sense of direction to our product and site.",
-    author: "Alex M",
-    role: "Product Lead",
+    quote: "总评、关键问题和下一次要准备的内容都能改，改完再存成终稿。",
+    author: "最终复盘",
+    role: "以你改过的为准",
   },
 ]
 
 // Helper for ticker items
-const TickerItem = ({ item }: { item: (typeof TRUSTED_COMPANIES)[0] }) => (
+const TickerItem = ({ item }: { item: (typeof REVIEW_MARKS)[0] }) => (
   <div className="flex items-center justify-center h-8 px-6 whitespace-nowrap text-sm font-bold tracking-tight text-neutral-400">
     {item.icon} <span className="ml-2 font-normal opacity-60 uppercase text-[10px] tracking-widest">{item.name}</span>
   </div>
@@ -52,7 +48,7 @@ export const DesignSidebar = () => {
   // Auto-rotate testimonials
   useEffect(() => {
     const timer = setInterval(() => {
-      setTestimonialIndex((prev) => (prev + 1) % TESTIMONIALS.length)
+      setTestimonialIndex((prev) => (prev + 1) % NOTES.length)
     }, 5000)
     return () => clearInterval(timer)
   }, [])
@@ -78,7 +74,7 @@ export const DesignSidebar = () => {
               面试复盘助手
             </h1>
             <p className="text-[16px] leading-[22.4px] text-[#0f0f12] opacity-80 font-normal tracking-[-0.4px] text-balance">
-              面试复盘助手 helps tomorrow's builders craft sharper products, smarter sites, and experiences built to lead.
+              把一场面试收成能留下的复盘。原始记录、初稿和终稿分开保存。
             </p>
           </div>
 
@@ -105,7 +101,7 @@ export const DesignSidebar = () => {
         {/* Ticker Section */}
         <div className="flex flex-col gap-2">
           <h3 className="text-[24px] leading-[28.8px] font-normal text-[#0f0f12] tracking-[-0.01em]">
-            Trusted By World Class Companies.
+            一份复盘里有这些
           </h3>
 
           <div className="relative h-8 w-full overflow-hidden mt-2">
@@ -118,8 +114,8 @@ export const DesignSidebar = () => {
                 repeat: Number.POSITIVE_INFINITY,
               }}
             >
-              {[...TRUSTED_COMPANIES, ...TRUSTED_COMPANIES].map((company, idx) => (
-                <TickerItem key={`${company.name}-${idx}`} item={company} />
+              {[...REVIEW_MARKS, ...REVIEW_MARKS].map((mark, idx) => (
+                <TickerItem key={`${mark.name}-${idx}`} item={mark} />
               ))}
             </motion.div>
             {/* Gradient Fades for Ticker */}
@@ -140,17 +136,17 @@ export const DesignSidebar = () => {
               className="flex flex-col gap-2"
             >
               <p className="text-[13px] leading-[16.8px] text-black font-normal tracking-[-0.2px] text-balance italic">
-                {TESTIMONIALS[testimonialIndex].quote}
+                {NOTES[testimonialIndex].quote}
               </p>
               <p className="text-[13px] leading-[16.8px] text-[#595959] font-normal tracking-[-0.2px]">
-                {TESTIMONIALS[testimonialIndex].author} — {TESTIMONIALS[testimonialIndex].role}
+                {NOTES[testimonialIndex].author} — {NOTES[testimonialIndex].role}
               </p>
             </motion.div>
           </AnimatePresence>
 
           {/* Pagination dots */}
           <div className="flex gap-1 mt-4">
-            {TESTIMONIALS.map((_, i) => (
+            {NOTES.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setTestimonialIndex(i)}
