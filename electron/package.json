@@ -1,0 +1,46 @@
+{
+  "name": "interview-review-assistant",
+  "version": "1.0.0",
+  "description": "面试复盘助手",
+  "author": "面试复盘助手",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "dev": "electron .",
+    "sync": "node scripts/sync-web.js",
+    "pack": "node scripts/sync-web.js && electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^37.10.3",
+    "electron-builder": "^26.0.0"
+  },
+  "build": {
+    "appId": "com.interview.review.assistant",
+    "productName": "面试复盘助手",
+    "copyright": "Copyright © 2026 面试复盘助手",
+    "artifactName": "面试复盘助手.exe",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "package.json",
+      "build/icon.png",
+      "app/**/*"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "portable": {
+      "artifactName": "面试复盘助手.exe"
+    }
+  },
+  "allowScripts": {
+    "electron@37.10.3": true,
+    "electron-winstaller@5.4.0": true
+  }
+}
