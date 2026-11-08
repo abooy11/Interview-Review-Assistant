@@ -2,6 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Faculty_Glyphic } from "next/font/google"
 import "./globals.css"
+import { publicPath } from "@/lib/public-path"
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
@@ -13,19 +14,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
+        url: publicPath("/icon-light-32x32.png"),
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/icon-dark-32x32.png",
+        url: publicPath("/icon-dark-32x32.png"),
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/icon.svg",
+        url: publicPath("/icon.svg"),
         type: "image/svg+xml",
       },
     ],
-    apple: "/apple-icon.png",
+    apple: publicPath("/apple-icon.png"),
   },
 }
 

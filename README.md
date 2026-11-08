@@ -29,3 +29,9 @@ npm run pack
 ```
 
 Windows 便携版输出到 `electron/release/面试复盘助手.exe`。
+
+## 网页
+
+推送到 `main` 后会自动构建并发布：
+
+https://abooy11.github.io/Interview-Review-Assistant/

@@ -5,6 +5,7 @@ import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Drawer, DrawerContent } from "@/components/ui/drawer"
 import { useMediaQuery } from "@/hooks/use-mobile"
 import Image from "next/image"
+import { publicPath } from "@/lib/public-path"
 
 export const AboutModal = () => {
   const [open, setOpen] = useState(false)
@@ -13,7 +14,7 @@ export const AboutModal = () => {
   const AboutContent = () => (
     <div className="flex flex-col gap-6 p-8 md:p-10">
       <div className="w-12 h-12 flex items-center justify-start">
-        <Image src="/images/logo.png" alt="面试复盘助手" width={48} height={48} className="w-auto h-12" />
+        <Image src={publicPath("/images/logo.png")} alt="面试复盘助手" width={48} height={48} className="w-auto h-12" />
       </div>
 
       {/* Headline */}

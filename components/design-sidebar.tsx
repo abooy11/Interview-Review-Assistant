@@ -6,6 +6,7 @@ import { ArrowRightCircle } from "lucide-react"
 import { AboutModal } from "./about-modal"
 import Image from "next/image"
 import Link from "next/link"
+import { publicPath } from "@/lib/public-path"
 
 // Constants for company logos
 const TRUSTED_COMPANIES = [
@@ -62,7 +63,7 @@ export const DesignSidebar = () => {
       <div className="flex flex-col gap-6 w-full">
         <div className="w-10 h-10 flex items-center justify-start cursor-pointer hover:scale-105 transition-transform">
           <Image
-            src="/images/logo.png"
+            src={publicPath("/images/logo.png")}
             alt="面试复盘助手"
             width={40}
             height={40}

@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowRight, Home } from "lucide-react"
 import Link from "next/link"
 import { getNextProject } from "@/lib/project-data"
+import { publicPath } from "@/lib/public-path"
 import { ContactForm } from "./contact-form"
 
 interface ProjectData {
@@ -84,7 +85,7 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
         {/* Hero Image */}
         <motion.div className="mb-12 rounded-2xl overflow-hidden" {...fadeInUp}>
           <img
-            src={project.heroImage || "/placeholder.svg"}
+            src={publicPath(project.heroImage || "/placeholder.svg")}
             alt={`${project.title} hero`}
             className="w-full aspect-[4/3] object-cover"
           />
@@ -101,7 +102,7 @@ export function ProjectDetail({ project }: { project: ProjectData }) {
           {project.galleryImages.map((src, index) => (
             <motion.div key={index} className="rounded-2xl overflow-hidden" {...fadeInUp}>
               <img
-                src={src || "/placeholder.svg"}
+                src={publicPath(src || "/placeholder.svg")}
                 alt={`${project.title} gallery ${index + 1}`}
                 className="w-full aspect-[4/3] object-cover"
               />
